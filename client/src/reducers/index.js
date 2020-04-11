@@ -1,11 +1,10 @@
-import {
-    combineReducers
-} from 'redux';
-import authReducer from './authReducer';
+import { combineReducers } from "redux";
+import { reducer as reduxForm } from "redux-form";
+import authReducer from "./authReducer";
+import surveysReducer from "./surveysReducer";
 
 export default combineReducers({
-    auth: authReducer
+  auth: authReducer,
+  form: reduxForm,
+  surveys: surveysReducer,
 });
-
-console.log("Stripe key is", process.env.REACT_APP_STRIPE_KEY)
-console.log("Environmemt is", process.env.NODE_ENV)
